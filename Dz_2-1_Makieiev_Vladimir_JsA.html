@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title>Домашнее задание 2-1 Макеева Владимира по JsA : Id and classes</title>
     <style>
-       #id1 {
+       /*#id1 {
             color: yellow;
             margin-top: 10px;
             background-color: red;
@@ -23,11 +23,24 @@
         div.newClass{
             color: green;
             font-size: 40px;
-        }
+        }*/
     </style>
 </head>
 <body>
     <h1 class="class1" id="id1">Пример 1 задачи 2-1</h1>
-    <div class="newClass" id="id1">Задача с селектором ID и Classes </div>
+    <div class="newClass">Задача с селектором ID и Classes </div>
+    <script type="text/javascript">
+            var titleH = document.getElementById('id1');
+            var myDiv = document.querySelector('.newClass');
+            myDiv.style.color = 'blue';
+            myDiv.style.fontSize = '30px';
+            myDiv.style.textDecoration = 'underline';
+            titleH.style.background = 'red';
+            titleH.style.color = 'yellow';
+            titleH.style.marginTop = "10px";
+            myDiv.classList.add('newClass');
+            console.dir(myDiv.style.cssText);
+            console.log(myDiv.classList);
+    </script>
 </body>
 </html>
