@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title>Домашнее задание 2-3 Макеева Владимира по JsA : Children, Parent</title>
     <style>
-    p {
+    /*p {
         color: orange;
     }
     div span {
@@ -17,7 +17,7 @@
     }
     div > span {
         color: #aaa333;
-    }
+    }*/
     </style>
 </head>
 <body>
@@ -26,7 +26,21 @@
         <span> 
             Для начала поговорим о разнице между HTML-кодом и <span>DOM</span>. Например, обычный элемент <table> — это, очевидно, HTML-код.<br/> Этот элемент можно использовать в html-файлах, у него есть набор атрибутов, который определяет внешний вид и поведение<br/>  создаваемой с его помощью таблицы. Собственно говоря, сам по себе тег <table> не имеет никакого отношения к JavaScript. Связь между HTML-элементами, присутствующими в документе, и JavaScript-кодом,<br/>  обеспечивает<span> DOM (Document Object Model</span>, объектная модель документа). DOM даёт возможность взаимодействовать<br/>  с HTML-элементами из JavaScript-кода так, как будто они являются объектами.
         </span><br/><br/>
+        <p>Lorem <span>ipsum</span> dolor sit amet, consectetur adipisicing elit. Quam fugiat voluptatem in, impedit, provident illum commodi blanditiis! Molestiae dicta, exercitationem repellat illo ratione laboriosam libero voluptatem, necessitatibus blanditiis unde vel!</p>
     </div>
     <a href="#">Задача с селектором Children, Parent </a>
+    <script type="text/javascript">
+        var spanText = document.getElementsByTagName("span");
+        spanText[0].style.color = 'pink';
+        var pText = document.querySelector('p');
+        pText.style.color = 'orange';
+        var aText = document.querySelector('a');
+        aText.style.textDecorationStyle = 'double';
+        var dSpan = document.querySelector('div > span');
+        dSpan.style.color = '#aaa333';
+        var allClass = document.querySelector('.class1');
+        allClass.classList.add('newClass');
+        console.dir(aText.style.cssText);
+    </script>
 </body>
 </html>
